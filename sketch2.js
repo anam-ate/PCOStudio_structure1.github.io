@@ -217,27 +217,38 @@ function mainDiagram()
    //ARRAY POINTS AND LABLES FOR EACH PROJECT
   //space of the points and how many points on the grid
   let numPoints = ceil(sortedKeys.length/4);
-  let borderX = 200;
-  let borderY = 150;
   
-  let gridSizePitch = (windowWidth - (7 * borderX)) / (numPoints - 1 );
+  let rows = 3;
+  let cols = 5;
+  let spacing = 250;
+  
+  let availableWidth = windowWidth - 2 * spacing;
+  let availableHeight = windowHeight - 2 * spacing;
+  let xStart = spacing + (availableWidth - (cols - 1) * spacing) / 2;
+  let yStart = spacing + (availableHeight - (rows - 1) * spacing) / 2;
+  
 
-  for (let i = 0; i < numPoints; i++) 
+  
+  for (let r = 0; r < rows; r++)
   {
-    let x = gridSizePitch * i + borderX;
-    for (let j = 0; j < numPoints; j++) 
+    for (let c = 0; c < cols; c++) 
     {
-      let y = gridSizePitch * j + borderX;
-      pts.push([x,y]);
-    
+      let x = xStart + c * spacing;
+      let y = yStart + r * spacing;
+      if (x < spacing || x > windowWidth - spacing || y < spacing || y > windowHeight - spacing) {
+        continue; // skip points outside the border
+      }
+      pts.push([x, y]);
     }
   }
 
+  console.log(pts);
 
   //MOVE ALL POINTS IN THE X COORDINATE BY /////200?>
   for(let i = 0; i < pts.length; i++) 
     {
-        pts[i][0] = pts[i][0] +500;
+        pts[i][0] = pts[i][0] -50;
+        pts[i][1] = pts[i][1] -50;
         
     }
 
