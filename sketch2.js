@@ -222,7 +222,7 @@ function mainDiagram()
   let cols = 7;
   let spacingX = 170;
   let spacingY = 250;
-  let availableWidth = width - 2 * spacingX;
+  let availableWidth = windowWidth - 2 * spacingX;
   let availableHeight = windowHeight - 2 * spacingY;
   let xStart = spacingX + (availableWidth - (cols - 1) * spacingX) / 2;
   let yStart = spacingY + (availableHeight - (rows - 1) * spacingY) / 2;
@@ -235,7 +235,7 @@ function mainDiagram()
     {
       let x = xStart + c * spacingX;
       let y = yStart + r * spacingY;
-      if (x < spacingX || x > width - spacingX || y < spacingY || y > windowHeight - spacingY) {
+      if (x < spacingX || x > windowWidth - spacingX || y < spacingY || y > windowHeight - spacingY) {
         continue; // skip points outside the border
       }
       pts.push([x, y]);
