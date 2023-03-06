@@ -1,1 +1,2 @@
-# PCOStudio_structure1.github.io
+# PCOStudioStructure.github.io
+PCO studio structure

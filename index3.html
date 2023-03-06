@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+    <!-- Include the noUiSlider library -->
+    <link rel="stylesheet"       href="https://cdn.jsdelivr.net/npm/nouislider@14.0.2/distribute/nouislider.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/nouislider@14.0.2/distribute/nouislider.min.js"></script>
+    
+  
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <meta charset="utf-8"/>
+
+  </head>
+  <body>
+  
+    <div id="ageSlider" class="slider"style="width: 420px; position: fixed; left: 73%; bottom: 83%;"></div>
+    <div id="agePips"></div>
+    <!-- Add display elements for the minimum and maximum age values -->
+    <div>
+      <div id="minAgeDisplay" class="text"></div>
+    </div>
+    <div>
+     <div id="maxAgeDisplay" class="text"></div>
+    </div>
+    
+    <div id="serviceSlider" class="slider"style="width: 420px; position: fixed; left: 73%; bottom: 76%;"></div>
+    <div id="servicePips"></div>
+    <!-- Add display elements for the minimum and maximum age values -->
+    <div>
+      <div id="minServiceDisplay" class="text"></div>
+    </div>
+    <div>
+     <div id="maxServiceDisplay" class="text"></div>
+    </div>
+  <!-- Include the p5.js canvas -->
+    <script src="sketch3.js"></script>
+    <style>
+      /* Add styles for the navigation menu */
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f2f2f2;
+      }
+
+      nav a {
+        padding: 12px 24px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0 4px;
+        border-top: 4px solid #f2f2f2;
+        border-bottom: 4px solid #f2f2f2;
+        transition: border-color 0.2s ease-in-out;
+      }
+
+      nav a:hover {
+        border-top-color: #666;
+        border-bottom-color: #666;
+      }
+
+      /* Add styles for the active tab */
+      nav .active {
+        border-top-color: #666;
+        border-bottom-color: #666;
+      }
+    </style>
+    <style>
+      .slider {
+        background-color: rgb(255,255,255)
+        
+      }
+    </style>
+   <style>
+      .noUi-connect 
+       {
+          background-color:rgb(239,162,162) ;
+      }
+    </style>
+    <style>
+      .text {
+        color: rgb(255,255,255);
+      }
+    </style>
+    <style>
+      .noUi-value {
+        color: black !important;
+      }
+      .noUi-marker {
+        color: blue !important;
+      }
+    </style>
+    <nav>
+      <a href="index.html" class="active">PCO_CVs</a>
+      <a href="index2.html">PCO_Teams</a>
+      <a href="index3.html">PCO_Structure</a>
+    </nav>
+
+    
+  </body>
+
+</html>
