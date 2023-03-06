@@ -218,14 +218,14 @@ function mainDiagram()
   //space of the points and how many points on the grid
   let numPoints = ceil(sortedKeys.length/4);
   
-  let rows = 3;
-  let cols = 5;
-  let spacing = 250;
-  
-  let availableWidth = windowWidth - 2 * spacing;
-  let availableHeight = windowHeight - 2 * spacing;
-  let xStart = spacing + (availableWidth - (cols - 1) * spacing) / 2;
-  let yStart = spacing + (availableHeight - (rows - 1) * spacing) / 2;
+  let rows = 5;
+  let cols = 7;
+  let spacingX = 170;
+  let spacingY = 250;
+  let availableWidth = width - 2 * spacingX;
+  let availableHeight = windowHeight - 2 * spacingY;
+  let xStart = spacingX + (availableWidth - (cols - 1) * spacingX) / 2;
+  let yStart = spacingY + (availableHeight - (rows - 1) * spacingY) / 2;
   
 
   
@@ -233,9 +233,9 @@ function mainDiagram()
   {
     for (let c = 0; c < cols; c++) 
     {
-      let x = xStart + c * spacing;
-      let y = yStart + r * spacing;
-      if (x < spacing || x > windowWidth - spacing || y < spacing || y > windowHeight - spacing) {
+      let x = xStart + c * spacingX;
+      let y = yStart + r * spacingY;
+      if (x < spacingX || x > width - spacingX || y < spacingY || y > windowHeight - spacingY) {
         continue; // skip points outside the border
       }
       pts.push([x, y]);
@@ -247,8 +247,8 @@ function mainDiagram()
   //MOVE ALL POINTS IN THE X COORDINATE BY /////200?>
   for(let i = 0; i < pts.length; i++) 
     {
-        pts[i][0] = pts[i][0] -50;
-        pts[i][1] = pts[i][1] -50;
+        pts[i][0] = pts[i][0] - 50;
+        pts[i][1] = pts[i][1] + 50;
         
     }
 
